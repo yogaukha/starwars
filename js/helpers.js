@@ -74,6 +74,7 @@ var Fire = (function(){
 	// logout
 	this.logout = function(callback){
 		this.ref.unauth();
+		data = false;
 		callback();
 	}
 
