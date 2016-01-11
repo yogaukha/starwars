@@ -19,6 +19,11 @@ app.router
 	controller: 'ReviewController',
 })
 .add({
+	name: 'aboutRoute',
+	path: '/about/',
+	controller: 'AboutController',
+})
+.add({
 	name: 'homeRoute',
 	path: '/',
 	controller: 'HomeController',
@@ -235,4 +240,11 @@ function ReviewController(){
 			});
 		}		
 	}
+}
+
+function AboutController(){
+	var scope = {
+		company : 'NipStudio'
+	};
+	app.view.render('about', scope);
 }
